@@ -67,6 +67,9 @@ Yazarak çalıştırabilirsiniz.
     ```
     Bu üç kod matrisi ekrana yazdırmayacaktır.
 
+  * Eğer hiç argüman kullanılmazsa; program, main.c içerisinde bulunan kodda önceden verilmiş olan 2 stringi karşılaştıracaktır ve default olarak matrisi de yazdıracaktır.
+    İstenirse kıyaslanacak stringler değiştirilecek şekilde kod düzenlenerek tekrar `make` ile çalıştırılabilir dosyalar oluşturulup argümansız bir şekilde çalıştırılabilir. 
+
 
 
 
