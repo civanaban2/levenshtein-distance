@@ -1,4 +1,4 @@
-# Levenshtein Algorithm
+# Levenshtein Algoritması
 
 Bu proje, iki metin arasındaki **Levenshtein Mesafesi**'ni hesaplamak için yazılmış bir uygulamadır. Levenshtein Mesafesi, iki metin arasındaki en küçük düzenleme sayısını (ekleme, silme, değiştirme) hesaplayan bir algoritmadır. Program ayrıca, kullanıcıya matrisin basılıp basılmayacağını belirleme seçeneği sunar.
 
@@ -7,7 +7,6 @@ Bu proje, iki metin arasındaki **Levenshtein Mesafesi**'ni hesaplamak için yaz
 - [Kurulum ve Derleme](#kurulum-ve-derleme)
 - [Kullanım](#kullanım)
 - [Argümanlar](#argümanlar)
-- [Dosya Yapısı](#dosya-yapısı)
 
 ## Proje Açıklaması
 
@@ -17,7 +16,7 @@ Ayrıca, kullanıcıya isteğe bağlı olarak hesaplanan matrisin ekranda yazdı
 
 ## Kurulum ve Derleme
 
-Proje, **Makefile** kullanarak derlenebilir. Aşağıdaki adımları takip ederek projeyi derleyebilir ve çalıştırabilirsiniz.
+Proje, "Makefile" kullanarak derlenebilir. Aşağıdaki adımları takip ederek projeyi derleyebilir ve çalıştırabilirsiniz.
 
 ### 1. Bağımlılıklar
 - C derleyicisi (örneğin GCC veya Clang)
@@ -25,25 +24,50 @@ Proje, **Makefile** kullanarak derlenebilir. Aşağıdaki adımları takip edere
 
 ### 2. Derleme Adımları
 
-Proje klasörünü açın ve terminal üzerinden aşağıdaki komutları sırasıyla girin:
+Proje klasörünü açın ve terminal üzerinden şu komutu girin: `make`
+Bu komut bin/MacOS ve bin/Windows dizinlerinde çalıştırılabilir dosyaları oluşturacaktır. Size uygun olanı kullanabilirsiniz.
+
+## Kullanım
+
+`bin/MacOS/levenshtein` ve `bin/Windows/levenshtein.exe` dosyaları oluştuktan sonra ilgili dizinlerde programı aşağıda gösterilen şekilde çalıştırabilirsiniz:
+
+### MacOS için
+bin/MacOS dizinindeyken terminalde:
+```
+levenshtein <string 1> <string 2> <matrix_flag>
+```
+### Windows için
+bin/Windows dizinindeyken terminalde veya powershell üzerinde:
+```
+levenshtein.exe <string 1> <string 2> <matrix_flag>
+```
+Yazarak çalıştırabilirsiniz.
+
+## Argümanlar
+
+  * **String 1** ve **String 2** yerine karşılaştıracağınız kelimeleri yazmalısınız, örneğin:
+    ```
+    levenshtein test rest
+    ```
+    Eğer boşluk içeren bir ifade veya cümle kullanacaksanız **""** arasına cümlelerinizi yazabilirsiniz, örneğin:
+    ```
+    levenshtein "Bu bir test cümlesi." "Bu biretss tcümlesfi."
+    ```
+    gibi.
+  * **matrix_flag** argümanı, uygulama çalıştığında hesaplamanın yapıldığı matrisi görmeniz için ekrana yazdırılmasını sağlayan bir özelliktir. Eğer 1 yazarsanız matris ekrana basılır, eğer 0 veya başka bir şey yazarsanız matris ekrana basılmaz. Bu özellik default olarak 0 değerindedir yani bu argüman yerine bir şey yazmazsanız matris ekrana yazılmayacaktır.
+    Örneğin:
+    ```
+    levenshtein kelimetest testkelime 1
+    ```
+    Bu kod ekrana matrisi de yazdıracaktır.
+    ```
+    levenshtein kelimetest testkelime
+    levenshtein kelimetest testkelime 0
+    levenshtein kelimetest testkelime asdasd
+    ```
+    Bu üç kod matrisi ekrana yazdırmayacaktır.
 
 
 
-# Levenshtein Mesafesi Programı
 
-Bu program, Levenshtein mesafesini hesaplayan bir algoritmayı uygular. İki kelime ya da cümle arasındaki düzenleme mesafesini bulmak için tasarlanmıştır. Program, birinci ve ikinci argüman olarak girilen iki kelimeyi karşılaştırır. Üçüncü bir argüman olarak, karşılaştırma sırasında kullanılan matrisin yazdırılıp yazdırılmayacağı belirlenebilir.
 
----
-
-## **Klasör Yapısı**
-
-main/
-├── bin/
-│   ├── MacOS/                # MacOS için çalıştırılabilir dosyalar
-│   └── Windows/              # Windows için çalıştırılabilir dosyalar
-├── src/                      # Kaynak kodları ve Makefile
-│   ├── main.c
-│   ├── levenshtein.c
-│   ├── print_matrix.c
-│   └── Makefile
-├── README.md                 # Proje açıklaması (bu dosya)
