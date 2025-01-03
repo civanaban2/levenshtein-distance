@@ -19,8 +19,7 @@ bin/Windows:
 	mkdir -p bin/Windows
 
 clean:
-	rm -f bin/MacOS/$(NAME)
-	rm -f bin/Windows/$(NAME).exe
+	rm -rf bin
 
 re: clean all
 
