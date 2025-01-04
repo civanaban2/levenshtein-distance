@@ -8,9 +8,9 @@ int	levenshtein_distance(const char *str1, const char *str2, int matrix_flag)
 	int	i, j, result;
 
 	// (row + 1) x (col + 1) boyutunda bir tablo olusturuyoruz.
-	matrix = (int **)calloc((row + 1), sizeof(int *));
+	matrix = (int **)malloc((row + 1) * sizeof(int *));
 	for (i = 0; i <= row; i++)
-		matrix[i] = (int *)calloc((col + 1), sizeof(int));
+		matrix[i] = (int *)malloc((col + 1) * sizeof(int));
 
     /* Tabloyu dolduralim ve yazdiralim. i = 0 ve j = 0 baslangic degerleri kendi
 	degerlerini alir. */

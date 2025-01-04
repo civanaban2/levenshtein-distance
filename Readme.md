@@ -34,7 +34,7 @@ Bu komut bin/MacOS ve bin/Windows dizinlerinde çalıştırılabilir dosyaları 
 ### MacOS için
 bin/MacOS dizinindeyken terminalde:
 ```
-levenshtein <string 1> <string 2> <matrix_flag>
+./levenshtein <string 1> <string 2> <matrix_flag>
 ```
 ### Windows için
 bin/Windows dizinindeyken terminalde veya powershell üzerinde:
