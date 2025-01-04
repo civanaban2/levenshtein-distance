@@ -47,23 +47,23 @@ Yazarak çalıştırabilirsiniz.
 
   * **String 1** ve **String 2** yerine karşılaştıracağınız kelimeleri yazmalısınız, örneğin:
     ```
-    levenshtein test rest
+    ./levenshtein test rest
     ```
     Eğer boşluk içeren bir ifade veya cümle kullanacaksanız **""** arasına cümlelerinizi yazabilirsiniz, örneğin:
     ```
-    levenshtein "Bu bir test cümlesi." "Bu biretss tcümlesfi."
+    ./levenshtein "Bu bir test cümlesi." "Bu biretss tcümlesfi."
     ```
     gibi.
   * **matrix_flag** argümanı, uygulama çalıştığında hesaplamanın yapıldığı matrisi görmeniz için ekrana yazdırılmasını sağlayan bir özelliktir. Eğer 1 yazarsanız matris ekrana basılır, eğer 0 veya başka bir şey yazarsanız matris ekrana basılmaz. Bu özellik default olarak 0 değerindedir yani bu argüman yerine bir şey yazmazsanız matris ekrana yazılmayacaktır.
     Örneğin:
     ```
-    levenshtein kelimetest testkelime 1
+    ./levenshtein kelimetest testkelime 1
     ```
     Bu kod ekrana matrisi de yazdıracaktır.
     ```
-    levenshtein kelimetest testkelime
-    levenshtein kelimetest testkelime 0
-    levenshtein kelimetest testkelime asdasd
+    ./levenshtein kelimetest testkelime
+    ./levenshtein kelimetest testkelime 0
+    ./levenshtein kelimetest testkelime asdasd
     ```
     Bu üç kod matrisi ekrana yazdırmayacaktır.
 
